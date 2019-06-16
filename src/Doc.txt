@@ -1,0 +1,31 @@
+/*************************** Css Section ***************************/
+
+1- css in js  in render => style={styleName}
+2- css in element or tag html style={{style}}
+3- dynamic classes used array and join
+4- used radium [ npm install --save radium ] used in render [ hover - mediaQuery{styleRoot} -  ]
+5- css module 
+
+
+/*************************** Section 1 ***************************/
+
+1- src => write code of project
+2- public => create folder like images or css
+3- react library and react-dom library
+4- jsx is not html 
+5- class => className
+6- for => htmlFor
+
+/*************************** Section 2 ***************************/
+1- faker.js => fake data like images company date
+2- props => system for passing data from parent component to child component
+3- props.children
+
+/*************************** Section 3 ***************************/
+1- state => state used with component class / js object contains data for component
+
+COMPONENT [ constructor - render - DidMount{ API } - DidUpdate - WillUnMount ]
+
+/*************************** Section 7 == Hanlde Form ***************************/
+1- app => [ form search ] / [ list of images component ]
+2- 3 events => { onClick: click, onChange: change, onSubmit, form }
