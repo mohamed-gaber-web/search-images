@@ -7,6 +7,7 @@ export class FormSearch extends Component {
     state = {
         dataFromInput: ''
     }
+
     // When Change In Input 
     handleInputChange = (e) => {
         const UpdateData = e.target.value;
@@ -17,6 +18,7 @@ export class FormSearch extends Component {
     handleSubmitForm = (e) => {
         e.preventDefault(); // stop redirect form
         this.props.submit(this.state.dataFromInput);
+        this.setState({dataFromInput: ''});
     }
 
     render() {
@@ -32,7 +34,7 @@ export class FormSearch extends Component {
                         value={this.state.dataFromInput.toLowerCase()}
                         onChange={this.handleInputChange}
                     />
-                    <i class="search icon"></i>
+                    <i className="search icon"></i>
                     </div>
                 </form>
             </div>

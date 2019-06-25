@@ -1,16 +1,27 @@
 import React from 'react';
 import './imageList.css';
+import { NavLink } from 'react-router-dom';
 
 const ImageList = (props) => {
 
-    const image = props.images.map(image => {
+    let All_Recipe =  props.recipes.map((r) => {
         return (
-            <img src={image.urls.regular} alt={image.description}  /> 
+            <div key={r.recipe_id}>
+                <img src={r.image_url} alt={r.title} />
+                <h3> 
+                    <NavLink to={{
+                        pathname: `/single-recipe/${r.recipe_id}`, 
+                        state: {rec: r.title}}}>
+                        {r.title.length > 30 ? r.title.substr(0, 15) : r.title + '...'} 
+                    </NavLink>
+                </h3> 
+            </div>
         );
-    })
+    });
+    
     return (
-        <div key={image.id} className='image-list'>
-            {image} 
+        <div className='image-list' >
+            {All_Recipe.length === 0 ? <h3 style={{textAlign: 'center'}}> Enter Your Search Word </h3> :  All_Recipe}
         </div>
     );
 }
